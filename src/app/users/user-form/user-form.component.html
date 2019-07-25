@@ -1,0 +1,85 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-new-user">
+        <div class="form-group">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" formControlName="username" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="name">Nome</label>
+                <input type="text" formControlName="name" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" formControlName="email" id="email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <label for="city">Cidade</label>
+                <input type="text" formControlName="city" id="city" required>
+            </div>
+            <div class="input-group">
+                <h4>Ride in group?</h4>
+                <div class="radio-button-group">
+                    <label for="always">
+                        <input type="radio" name="always" id="always" checked>Always
+                    </label>
+                </div>
+                <div class="radio-button-group">
+                    <label for="sometimes">
+                        <input type="radio" name="sometimes" id="sometimes">Sometimes
+                    </label>
+                </div>
+                <div class="radio-button-group">
+                    <label for="never">
+                        <input type="radio" name="never" id="never">Never
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="input-group">
+                <h4>Days of the week</h4>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="sunday" id="sunday">Sun
+                    </label>
+                </div>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="monday" id="monday">Mon
+                    </label>
+                </div>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="tuesday" id="tuesday">Tue
+                    </label>
+                </div>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="wednesday" id="wednesday">Wed
+                    </label>
+                </div>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="thursday" id="thursday">Thu
+                    </label>
+                </div>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="friday" id="friday">Fri
+                    </label>
+                </div>
+                <div class="input-checkbox-group">
+                    <label for="sunday">
+                        <input type="checkbox" name="saturday" id="saturday">Sat
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-group">
+        <button class="btn btn-confirm" type="submit">Save</button>
+        <button class="btn btn-cancel" type="reset">Cancel</button>
+    </div>
+</form>

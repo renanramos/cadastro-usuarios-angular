@@ -1,0 +1,43 @@
+<div class="header">
+    <h1>Users</h1>
+    <div class="search-form">
+        <i class="material-icons">search</i>
+        <input type="text" [(ngModel)]="search" id="search" placeholder="Filter table content">
+    </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>City</th>
+            <th>Ride in group</th>
+            <th>Day of the week</th>
+            <th>Posts</th>
+            <th>Albums</th>
+            <th>Photos</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users | filterTable: search, let i = index">
+            <td>{{u.username}}</td>
+            <td>{{u.name}}</td>
+            <td><a href="mailto://{{u.email}}">{{u.email}}</a></td>
+            <td>
+                <a href="https://maps.google.com/?q={{u.address.geo.lng}},{{u.address.geo.lat}}" target="_blank">
+                    {{u.address.city}}
+                </a>
+            </td>
+            <td>--</td>
+            <td>--</td>
+            <td>{{u.totalPosts}}</td>
+            <td>{{u.totalAlbuns}}</td>
+            <td>{{u.totalPhotos}}</td>
+            <td (click)="deleteUser(i)" title="Excluir {{u.name}}">
+                <i class="material-icons" >delete</i>
+            </td>
+        </tr>
+    </tbody>
+</table>

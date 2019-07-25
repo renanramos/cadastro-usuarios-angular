@@ -1,0 +1,136 @@
+.header{
+    display: flex;    
+    justify-content: space-between;    
+}
+
+.header h1{
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.search-form{
+    display: inline-block;
+}
+
+.search-form i {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.search-form input{
+    margin-top: 40px;
+    padding: 7px 150px 7px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;    
+}
+
+.search-form input::placeholder{
+    position: left;
+    font-size: 14px;
+}
+
+table{
+    text-align: center;
+    font-size: 12px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+tr, th, td{
+    padding: 12px;
+    text-align: left;
+}
+
+th:nth-child(5),
+th:nth-child(6),
+th:nth-child(7),
+th:nth-child(8),
+th:nth-child(9){
+    text-align: center;
+}
+
+
+td:nth-child(5),
+td:nth-child(6),
+td:nth-child(7),
+td:nth-child(8),
+td:nth-child(9){
+    text-align: center;
+}
+
+
+tr i{
+    visibility: hidden;
+}
+
+tr:hover i{
+    visibility: visible;
+}
+
+
+tr:nth-child(even){
+    background-color: rgba(247, 242, 242, 0.979);
+}
+
+td:nth-last-child(1){
+    text-align: center;
+    cursor: pointer;
+}
+
+td a{
+    text-decoration: none;
+    color: green;
+}
+
+td a:hover{
+    text-decoration: underline;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    
+    .header{   
+        display: flex;
+    }
+
+    .header h1{
+        float: left;
+    }
+
+    .search-form{
+        margin-left: 100px;                
+        margin-top: -20px;
+    }
+
+    .search-form i{
+        visibility: hidden;
+    }
+    
+    table{
+        font-size: 16px;
+        width: 100%;
+        padding: 10px 15px;        
+        overflow: scroll;                
+    }
+
+    td, th{
+        border-collapse: collapse;
+    }
+
+    th:nth-child(4),
+    th:nth-child(5),
+    th:nth-child(6),
+    th:nth-last-child(1){
+        display: none;
+    }
+    td:nth-child(4),
+    td:nth-child(5),
+    td:nth-child(6),
+    td:nth-last-child(1){
+        display: none;
+    }
+}
